@@ -1,4 +1,4 @@
-fetch("https://9ced-122-161-50-113.in.ngrok.io/robot.png")
+fetch("https://9ced-122-161-50-113.in.ngrok.io")
   .then(response => {
     // indicates whether the response is successful (status code 200-299) or not
     if (!response.ok) {
