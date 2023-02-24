@@ -1,13 +1,21 @@
-fetch("https://9ced-122-161-50-113.in.ngrok.io")
-  .then(response => {
-    // indicates whether the response is successful (status code 200-299) or not
-    if (!response.ok) {
-      throw new Error(`Request failed with status ${reponse.status}`)
+var xmlhttp = new XMLHttpRequest();
+var url = "https://9ced-122-161-50-113.in.ngrok.io/";
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
     }
-    return response.json()
-  })
-  .then(data => {
-    console.log(data.count)
-    console.log(data.products)
-  })
-  .catch(error => console.log(error))
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    for(i = 0; i < arr.length; i++) {
+        out += '<a href="' + arr[i].url + '">' +
+        arr[i].display + '</a><br>';
+    }
+    document.getElementById("id01").innerHTML = out;
+}
