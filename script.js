@@ -5,4 +5,4 @@ img.onload = function() {
 img.onerror = function() {
   console.error('Error loading image');
 };
-img.src = 'https://static.vecteezy.com/system/resources/previews/000/199/370/original/vector-robot-cheerful-isolated-on-blue-background-concept-illustration.jpg';
+img.src = 'https://9ced-122-161-50-113.in.ngrok.io/robot.png';
